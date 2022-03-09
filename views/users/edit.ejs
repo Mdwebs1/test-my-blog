@@ -1,0 +1,21 @@
+
+<form action="/users/update/<%=user._id%>?_method=PUT" method="POST">
+    <div class="mb-3">
+        <label for="fName" class="form-label" >First Name</label>
+        <input name="fName" type="text" value="<%=user.name.fName%>" placeholder="first name" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label for="lName" class="form-label">Last Name</label>
+        <input name="lName" type="text" value="<%=user.name.lName%>" placeholder="last name" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label for="DoB" class="form-label" >Date of Birth</label>
+        <input name="DoB" type="date" value="<%=user.DoB.toISOString().slice(0, 10)%>" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" value="<%=user.email%>" placeholder="email" class="form-control"/>
+    </div>
+    
+    <button type="submit" class="btn btn-dark" >Update</button>
+</form>

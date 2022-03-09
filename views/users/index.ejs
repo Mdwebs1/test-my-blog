@@ -1,0 +1,27 @@
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <td>operations</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% users.forEach(user=> { %>
+        <tr>
+            <td><%= user.name.firstName%>, <%= user.name.lastName%></td>
+            <td><%= user.DoB.toDateString() %></td>
+            <td><%= (user.gender? "Female": "Male") %></td>
+            <td><%= user.email %></td>
+ <td>
+
+    <a class="btn btn-danger" href="/users/delete/<%= user.id%>?_method=delete">delete</a>
+    <a class="btn btn-dark" href="/users/update/<%= user._id%>">update</a>
+</td>
+        </tr>
+        <% })%>
+    </tbody>
+</table>

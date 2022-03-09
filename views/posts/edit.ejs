@@ -1,0 +1,13 @@
+
+<form action="/posts/update/<%=post._id%>?_method=PUT" method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label" >Title</label>
+        <input name="title" type="text" value="<%=post.title%>" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label for="text" class="form-label">Text</label>
+        <input name="text" type="text" value="<%=post.text%>" class="form-control"/>
+    </div>
+    
+    <button type="submit" class="btn btn-dark" >Update</button>
+</form>
